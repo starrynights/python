@@ -11,10 +11,19 @@ import fileinput
 #    print line
 
 #type 3
-f = open(sys.argv[1])
-for line in f:
-    '''add , after print can del \n'''
-    print line,
-f.close()
+#f = open(sys.argv[1])
+#for line in f:
+#    '''add , after print can del \n'''
+#    print line,
+#f.close()
 
+#read a char per time
+def test():
+    f = open(sys.argv[1])
+    for char in f.read():
+        """Use write replace print"""
+        sys.stdout.write(char)
+    f.close()
+test()
+print test.__doc__
 
