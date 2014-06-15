@@ -20,7 +20,9 @@ class deal_thread(threading.Thread):
             if not str:
                 self.stop()
             else:
+                #the identifiter of a thread
                 id = self.ident
+                #the count of all active threads
                 count = threading.activeCount()
                 print count, " Thread ", id, " Get conn from ", self.addr, " : ", str
                 self.conn.send("hello from server")
